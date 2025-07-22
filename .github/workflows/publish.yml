@@ -69,8 +69,8 @@ jobs:
             releaseDate: date,
             changelog,
             platforms: {
-              daisy: `https://github.com/unwndevices/unwn_fw/raw/main/firmware/eisei/daisy/eisei-daisy-${version}.bin`,
-              esp32: `https://github.com/unwndevices/unwn_fw/raw/main/firmware/eisei/esp32/eisei-esp32-${version}.bin`
+              daisy: `https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-${version}.bin`,
+              esp32: `https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-${version}.bin`
             }
           });
           
