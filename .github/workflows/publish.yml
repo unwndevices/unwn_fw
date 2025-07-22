@@ -18,10 +18,16 @@ jobs:
         run: |
           VERSION="${{ github.event.client_payload.version }}"
           
-          # Download binaries from private repo release
+          # Get release info and download binaries
           curl -L -H "Authorization: Bearer ${{ secrets.PRIVATE_REPO_TOKEN }}" \
                "https://api.github.com/repos/unwndevices/unwn/releases/tags/${VERSION}" \
-               | jq -r '.assets[].browser_download_url' \
+               > release_info.json
+          
+          # Extract changelog
+          jq -r '.body' release_info.json > changelog.txt
+          
+          # Download binaries
+          jq -r '.assets[].browser_download_url' release_info.json \
                | xargs -I {} curl -L -O {}
                
       - name: Copy to Firmware Directory
@@ -53,11 +59,15 @@ jobs:
             releases = JSON.parse(fs.readFileSync('releases.json'));
           }
           
+          // Read changelog from extracted release notes
+          const changelogText = fs.readFileSync('changelog.txt', 'utf8');
+          const changelog = changelogText.split('\n').filter(line => line.trim());
+          
           releases.latest = version;
           releases.releases.unshift({
             version,
             releaseDate: date,
-            changelog: ["See GitHub release for changes"],
+            changelog,
             platforms: {
               daisy: `https://github.com/unwndevices/unwn_fw/raw/main/firmware/eisei/daisy/eisei-daisy-${version}.bin`,
               esp32: `https://github.com/unwndevices/unwn_fw/raw/main/firmware/eisei/esp32/eisei-esp32-${version}.bin`
@@ -68,6 +78,9 @@ jobs:
           EOF
           
           node update_releases.js "${VERSION}" "${DATE}"
+          
+          # Clean up temporary files
+          rm -f eisei-*.bin update_releases.js release_info.json changelog.txt
           
       - name: Commit and Push
         run: |
