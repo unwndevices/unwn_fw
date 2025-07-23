@@ -1,6 +1,25 @@
 {
-  "latest": "v0.1.1e",
+  "latest": "v0.1.1f",
   "releases": [
+    {
+      "version": "v0.1.1f",
+      "releaseDate": "2025-07-23",
+      "changelog": [
+        "### v0.1.1f - Automated Release - new test",
+        "**New Features**",
+        "- New automated release workflow",
+        "**Improvements**",
+        "- Better release notes",
+        "---",
+        "**Technical Details**",
+        "- Built from commit: 5800fe3",
+        "- Build date: 2025-07-23"
+      ],
+      "platforms": {
+        "daisy": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-v0.1.1f.bin",
+        "esp32": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-v0.1.1f.bin"
+      }
+    },
     {
       "version": "v0.1.1e",
       "releaseDate": "2025-07-23",
