@@ -1,6 +1,18 @@
 {
-  "latest": "v0.1.1-b",
+  "latest": "v0.1.1d",
   "releases": [
+    {
+      "version": "v0.1.1d",
+      "releaseDate": "2025-07-23",
+      "changelog": [
+        "## Initial Release",
+        "- First firmware release"
+      ],
+      "platforms": {
+        "daisy": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-v0.1.1d.bin",
+        "esp32": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-v0.1.1d.bin"
+      }
+    },
     {
       "version": "v0.1.1-b",
       "releaseDate": "2025-07-22",
