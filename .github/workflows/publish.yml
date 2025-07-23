@@ -28,7 +28,7 @@ jobs:
           
           # Download binaries
           jq -r '.assets[].browser_download_url' release_info.json \
-               | xargs -I {} curl -L -O {}
+               | xargs -I {} curl -L -H "Authorization: Bearer ${{ secrets.PRIVATE_REPO_TOKEN }}" -O {}
                
       - name: Copy to Firmware Directory
         run: |
