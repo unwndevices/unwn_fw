@@ -1,6 +1,45 @@
 {
-  "latest": "v0.1.1d",
+  "latest": "v0.1.1e",
   "releases": [
+    {
+      "version": "v0.1.1e",
+      "releaseDate": "2025-07-23",
+      "changelog": [
+        "### v0.1.1e - Automated Release - test",
+        "**New Features**",
+        "- New automated release workflow",
+        "**Improvements**",
+        "- Better release notes",
+        "### v0.1.1d - Automated Release - test",
+        "**New Features**",
+        "- New automated release workflow",
+        "**Improvements**",
+        "- Better release notes",
+        "### v0.1.1c - Automated Release - fix",
+        "**New Features**",
+        "- New automated release workflow",
+        "**Improvements**",
+        "- Better release notes",
+        "### v0.1.1b - Automated Release",
+        "**New Features**",
+        "- New automated release workflow",
+        "**Improvements**",
+        "- Better release notes",
+        "### v0.1.1 - Feedback Processor",
+        "**New Features**",
+        "- Feedback processor",
+        "**Improvements**",
+        "- Better I2C communication reliability",
+        "---",
+        "**Technical Details**",
+        "- Built from commit: 489c80d",
+        "- Build date: 2025-07-23"
+      ],
+      "platforms": {
+        "daisy": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-v0.1.1e.bin",
+        "esp32": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-v0.1.1e.bin"
+      }
+    },
     {
       "version": "v0.1.1d",
       "releaseDate": "2025-07-23",
