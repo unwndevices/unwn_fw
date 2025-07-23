@@ -1,6 +1,22 @@
 {
-  "latest": "v0.1.2",
+  "latest": "v0.1.2b",
   "releases": [
+    {
+      "version": "v0.1.2b",
+      "releaseDate": "2025-07-23",
+      "changelog": [
+        "### v0.1.2b - testing cached build speed",
+        "- Testing cached build speed",
+        "---",
+        "**Technical Details**",
+        "- Built from commit: 00da0c2",
+        "- Build date: 2025-07-23"
+      ],
+      "platforms": {
+        "daisy": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-v0.1.2b.bin",
+        "esp32": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-v0.1.2b.bin"
+      }
+    },
     {
       "version": "v0.1.2",
       "releaseDate": "2025-07-23",
