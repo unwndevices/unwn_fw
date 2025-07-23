@@ -1,6 +1,25 @@
 {
-  "latest": "v0.1.2g",
+  "latest": "v0.1.2h",
   "releases": [
+    {
+      "version": "v0.1.2h",
+      "releaseDate": "2025-07-23",
+      "changelog": [
+        "### v0.1.2h - Improved I2C communication reliability",
+        "**New Features**",
+        "- Feedback processor",
+        "**Improvements**",
+        "- Better I2C communication reliability",
+        "---",
+        "**Technical Details**",
+        "- Built from commit: 3a4dc05",
+        "- Build date: 2025-07-23"
+      ],
+      "platforms": {
+        "daisy": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-v0.1.2h.bin",
+        "esp32": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-v0.1.2h.bin"
+      }
+    },
     {
       "version": "v0.1.2g",
       "releaseDate": "2025-07-23",
