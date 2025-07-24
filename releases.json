@@ -1,6 +1,28 @@
 {
-  "latest": "v0.1.2m",
+  "latest": "v0.1.3",
   "releases": [
+    {
+      "version": "v0.1.3",
+      "releaseDate": "2025-07-24",
+      "changelog": [
+        "### v0.1.3 - I2C speed improvements",
+        "**New Features**",
+        "- reset gate functionality activated.",
+        "- record gate functionality activated.",
+        "**Improvements**",
+        "- 400kHz I2C speed",
+        "- faster XOR checksum",
+        "- non-blocking i2c retry logic",
+        "---",
+        "**Technical Details**",
+        "- Built from commit: a085518",
+        "- Build date: 2025-07-24"
+      ],
+      "platforms": {
+        "daisy": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-v0.1.3.bin",
+        "esp32": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-v0.1.3.bin"
+      }
+    },
     {
       "version": "v0.1.2m",
       "releaseDate": "2025-07-23",
