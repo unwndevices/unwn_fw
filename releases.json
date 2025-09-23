@@ -1,6 +1,24 @@
 {
-  "latest": "v0.1.3d",
+  "latest": "v0.1.4b",
   "releases": [
+    {
+      "version": "v0.1.4b",
+      "releaseDate": "2025-09-23",
+      "changelog": [
+        "### v0.1.4b - Warp UI Enhancements",
+        "**New Features**",
+        "- Warp UI now includes a slider that visually represents the warp amount.",
+        "- Warp icon updates dynamically based on the selected warp type.",
+        "---",
+        "**Technical Details**",
+        "- Built from commit: 3f01684",
+        "- Build date: 2025-09-23"
+      ],
+      "platforms": {
+        "daisy": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-v0.1.4b.bin",
+        "esp32": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-v0.1.4b.bin"
+      }
+    },
     {
       "version": "v0.1.3d",
       "releaseDate": "2025-07-24",
