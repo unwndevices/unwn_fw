@@ -1,6 +1,26 @@
 {
-  "latest": "v0.1.4b",
+  "latest": "v0.1.5",
   "releases": [
+    {
+      "version": "v0.1.5",
+      "releaseDate": "2025-09-25",
+      "changelog": [
+        "### v0.1.5 - Rec Fix, warp ui, popup ui",
+        "**New Features**",
+        "- warp ui now react to cv",
+        "- popup ui now available for notifications and instructions",
+        "**Bug Fixes**",
+        "- fixed rec button not working (needs hardware fix)",
+        "---",
+        "**Technical Details**",
+        "- Built from commit: be05e70",
+        "- Build date: 2025-09-25"
+      ],
+      "platforms": {
+        "daisy": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-v0.1.5.bin",
+        "esp32": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-v0.1.5.bin"
+      }
+    },
     {
       "version": "v0.1.4b",
       "releaseDate": "2025-09-23",
