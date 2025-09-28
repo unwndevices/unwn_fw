@@ -1,6 +1,25 @@
 {
-  "latest": "v0.1.5",
+  "latest": "v0.1.6",
   "releases": [
+    {
+      "version": "v0.1.6",
+      "releaseDate": "2025-09-28",
+      "changelog": [
+        "### v0.1.6 - Bug Fixes and Improvements",
+        "**Bug Fixes**",
+        "- clamp and reproject start/end settings via Orbits::UpdateRange so Daisy, VCV, and preset restores keep responding after each edit",
+        "- fix warp asset lookups (tanh vs shape), rename the warp buffers accordingly, and bound oscillator amplitude/Orbit control to the 110 Hz spec",
+        "- expand infrastructure: broaden .gitignore, stop Spectra from force-wrapping frequencies, pull in SharedData’s <string>, and add the build/dual-serial helper scripts",
+        "---",
+        "**Technical Details**",
+        "- Built from commit: 70a665c",
+        "- Build date: 2025-09-28"
+      ],
+      "platforms": {
+        "daisy": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-v0.1.6.bin",
+        "esp32": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-v0.1.6.bin"
+      }
+    },
     {
       "version": "v0.1.5",
       "releaseDate": "2025-09-25",
