@@ -1,6 +1,36 @@
 {
-  "latest": "v0.1.6",
+  "latest": "v0.1.7",
   "releases": [
+    {
+      "version": "v0.1.7",
+      "releaseDate": "2025-10-16",
+      "changelog": [
+        "### v0.1.7 - Dual Engine & Screensaver",
+        "**New Features**",
+        "- Introduced a selectable datum engine pipeline with runtime-switchable legacy static coefficients; toggle via the USB `engine mode <current|legacy>` command or the `EISEI_DATUM_ENGINE_MODE` environment variable to compare behaviors without reflashing.",
+        "- Added a 45-second \"Naptime\" screensaver scene with 1-bit animation, automatic contrast dimming after 25 seconds, and instant wake on any control input to protect the display.",
+        "- Applied Mutable Instruments-style encoder acceleration (up to 24x) so orbit and parameter sweeps keep up with fast gestures while preserving fine control.",
+        "**Improvements**",
+        "- Orbit UI now clamps multipliers to +/-16x, uses 0.25 steps, and keeps displays in sync when selecting satellites (resolves GitHub issues #40 and #28).",
+        "- Converted Warp, PopUp, and feedback assets plus the sprite pipeline to 1-bit monochrome, reducing memory pressure and matching hardware vs Rack output.",
+        "- Extended USB serial diagnostics with `engine` and `engine-slots` commands plus richer logging for orbit phases, warp states, and slot contents.",
+        "- Hardened hardware bring-up: enabled Daisy Seed USART1 pull-ups for I²C stability, lowered the OLED SPI rate, and tidied ESP32 build steps.",
+        "**Bug Fixes**",
+        "- Stabilized the filter bank under extreme CV inputs by regenerating coefficients safely and adding legacy static tables.",
+        "- Stopped the REC input from muting oscillator D and restored touchwheel lock persistence.",
+        "- Fixed screensaver animation playback, odd-width sprite stride errors, and satellite trail defaults that left ghost artifacts.",
+        "- Corrected negative orbit value clamping so encoder-driven ranges apply across presets.",
+        "- Resolved duplicate ESP32 flash builds and missing I²C includes that previously blocked cross-target builds.",
+        "---",
+        "**Technical Details**",
+        "- Built from commit: c76fd0d",
+        "- Build date: 2025-10-16"
+      ],
+      "platforms": {
+        "daisy": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-v0.1.7.bin",
+        "esp32": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-v0.1.7.bin"
+      }
+    },
     {
       "version": "v0.1.6",
       "releaseDate": "2025-09-28",
