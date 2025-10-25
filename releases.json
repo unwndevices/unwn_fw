@@ -1,6 +1,33 @@
 {
-  "latest": "v0.1.7",
+  "latest": "v0.1.8b",
   "releases": [
+    {
+      "version": "v0.1.8b",
+      "releaseDate": "2025-10-25",
+      "changelog": [
+        "### v0.1.8b - Orbit UI Refinement & Engine Simplification",
+        "**New Features**",
+        "- Redesigned Orbit UI with enhanced visual feedback and improved user experience",
+        "- Added new orbit display assets including frequency, multiplier, position, and target indicators",
+        "- Streamlined firmware architecture with legacy engine focus for improved stability",
+        "**Improvements**",
+        "- Updated number font rendering for better readability in orbit displays",
+        "- Enhanced orbit UI layout with more intuitive visual elements",
+        "- Simplified filter bank coefficients management by focusing on legacy static tables",
+        "- Reduced code complexity in datum engine implementations",
+        "**Bug Fixes**",
+        "- Fixed font naming consistency in number rendering system",
+        "- Resolved coefficient table management issues by simplifying to legacy-only approach",
+        "---",
+        "**Technical Details**",
+        "- Built from commit: 8548668",
+        "- Build date: 2025-10-25"
+      ],
+      "platforms": {
+        "daisy": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-v0.1.8b.bin",
+        "esp32": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-v0.1.8b.bin"
+      }
+    },
     {
       "version": "v0.1.7",
       "releaseDate": "2025-10-16",
