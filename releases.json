@@ -1,6 +1,23 @@
 {
-  "latest": "v0.1.8b",
+  "latest": "v0.1.9",
   "releases": [
+    {
+      "version": "v0.1.9",
+      "releaseDate": "2025-11-14",
+      "changelog": [
+        "### v0.1.9 - i2c hardening",
+        "**Improvements**",
+        "- Hardened I2C communication with less overhead and better error handling",
+        "---",
+        "**Technical Details**",
+        "- Built from commit: 511417e",
+        "- Build date: 2025-11-14"
+      ],
+      "platforms": {
+        "daisy": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-v0.1.9.bin",
+        "esp32": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-v0.1.9.bin"
+      }
+    },
     {
       "version": "v0.1.8b",
       "releaseDate": "2025-10-25",
