@@ -1,6 +1,23 @@
 {
-  "latest": "v0.1.10",
+  "latest": "v0.1.11",
   "releases": [
+    {
+      "version": "v0.1.11",
+      "releaseDate": "2025-11-19",
+      "changelog": [
+        "### v0.1.11 - Legacy Key tracking fix",
+        "** Improvements**",
+        "- reverted key tracking changes that caused issues with key cv in ",
+        "---",
+        "**Technical Details**",
+        "- Built from commit: f73be5e",
+        "- Build date: 2025-11-19"
+      ],
+      "platforms": {
+        "daisy": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-v0.1.11.bin",
+        "esp32": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-v0.1.11.bin"
+      }
+    },
     {
       "version": "v0.1.10",
       "releaseDate": "2025-11-19",
