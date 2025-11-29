@@ -1,6 +1,48 @@
 {
-  "latest": "v0.1.11",
+  "latest": "v0.2.0",
   "releases": [
+    {
+      "version": "v0.2.0",
+      "releaseDate": "2025-11-29",
+      "changelog": [
+        "### v0.2.0 - Slot Management & Remote Control Enhancements",
+        "**New Features**",
+        "- slot management system with assignment and loading",
+        "- async slot loading to prevent system hangs",
+        "- serial remote control interface for parameter control",
+        "- VCV Rack Lua scripting support",
+        "- status UI with animated save/load feedback",
+        "- datum preview shows raw data instead of post-lens",
+        "- DROP Serial Controller base integration",
+        "- RC Hardware initialization improvements",
+        "**Improvements**",
+        "- enhanced encoder acceleration algorithm",
+        "- improved slot loading for all slots during initialization",
+        "- fixed satellite 4 LED behavior",
+        "- better datum header alignment",
+        "- resonance control via serial remote",
+        "- comprehensive I2C and serial debugging",
+        "- enhanced normalization monitoring",
+        "- slot statistics and usage tracking",
+        "- memory management with static SDRAM buffers",
+        "- VCV Rack compatibility improvements",
+        "**Bug Fixes**",
+        "- fixed datum view to show raw data instead of post-lens",
+        "- resolved slot mapping issues during initialization",
+        "- corrected async loading state management",
+        "- fixed encoder acceleration behavior",
+        "- stabilized I2C communication",
+        "- resolved hardware initialization order",
+        "---",
+        "**Technical Details**",
+        "- Built from commit: af5fc63",
+        "- Build date: 2025-11-29"
+      ],
+      "platforms": {
+        "daisy": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-v0.2.0.bin",
+        "esp32": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-v0.2.0.bin"
+      }
+    },
     {
       "version": "v0.1.11",
       "releaseDate": "2025-11-19",
