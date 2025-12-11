@@ -1,6 +1,43 @@
 {
-  "latest": "v0.2.0",
+  "latest": "v0.2.1c",
   "releases": [
+    {
+      "version": "v0.2.1c",
+      "releaseDate": "2025-12-11",
+      "changelog": [
+        "### v0.2.1c - Calibration System & Serial Improvements",
+        "**New Features**",
+        "- serial output via external USB port",
+        "- get commands in serial command manager for parameter queries",
+        "- new serial commands for extended control",
+        "- redesigned calibration scene UI",
+        "- new naptime animation",
+        "- REC LED setup and control",
+        "- calibration manager system for improved calibration workflow",
+        "- debug and release firmware builds for Daisy platform",
+        "**Improvements**",
+        "- enhanced calibration process with better user feedback",
+        "- fine-tuned engine configuration values",
+        "- parameter tuning for improved performance",
+        "- flash script now waits for device connection",
+        "- RC pinout configuration updates",
+        "- bandwidth control simplified",
+        "- serial command helpers for improved command handling",
+        "**Bug Fixes**",
+        "- fixed exclusive button states to prevent conflicts",
+        "- fixed probe disabling during calibration",
+        "- calibration fixes and stability improvements",
+        "---",
+        "**Technical Details**",
+        "- Built from commit: 449cb26",
+        "- Build date: 2025-12-11"
+      ],
+      "platforms": {
+        "daisy": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-release-v0.2.1c.bin",
+        "daisy_debug": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy_debug/eisei-daisy-debug-v0.2.1c.bin",
+        "esp32": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-v0.2.1c.bin"
+      }
+    },
     {
       "version": "v0.2.0",
       "releaseDate": "2025-11-29",
