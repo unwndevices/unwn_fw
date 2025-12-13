@@ -1,6 +1,26 @@
 {
-  "latest": "v0.2.1c",
+  "latest": "v0.2.2",
   "releases": [
+    {
+      "version": "v0.2.2",
+      "releaseDate": "2025-12-13",
+      "changelog": [
+        "### v0.2.2 - Serial Improvements",
+        "**Improvements**",
+        "- serial output via both USB ports",
+        "- reset gate functionality activated",
+        "- cv input 4 now used for audio scanner control",
+        "---",
+        "**Technical Details**",
+        "- Built from commit: d1dd229",
+        "- Build date: 2025-12-13"
+      ],
+      "platforms": {
+        "daisy": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-release-v0.2.2.bin",
+        "daisy_debug": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy_debug/eisei-daisy-debug-v0.2.2.bin",
+        "esp32": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-v0.2.2.bin"
+      }
+    },
     {
       "version": "v0.2.1c",
       "releaseDate": "2025-12-11",
