@@ -1,6 +1,45 @@
 {
-  "latest": "v0.2.2",
+  "latest": "v0.2.3d",
   "releases": [
+    {
+      "version": "v0.2.3d",
+      "releaseDate": "2026-01-08",
+      "changelog": [
+        "### v0.2.3d - Lens Algorithm & Communication Improvements",
+        "**New Features**",
+        "- switched from I2C to UART communication protocol between ESP32 and Daisy",
+        "- new lens algorithm with non-centered support and improved range",
+        "- lensed datum view when satellite is selected",
+        "- optional FPS counter for screen UI",
+        "- blur warp effect replacing feedback processor",
+        "- calibration process rework",
+        "**Improvements**",
+        "- better communication protocol structure for Daisy side",
+        "- improved UI loop performance",
+        "- latency improvements",
+        "- improved touch-wheel algorithm",
+        "- better pot ranges for key input",
+        "- lowered pot deadband and button debouncing for better responsiveness",
+        "- removed dual acceleration on encoder",
+        "- restored get commands for serial command manager",
+        "**Bug Fixes**",
+        "- fixed CV range direction",
+        "- fixed communication initialization (working rx and tx)",
+        "- fixed UART DMA buffer issues with non-cached buffer and robust error recovery",
+        "**General**",
+        "- build and flash script improvements",
+        "- code cleanup (removed repeated import, protocol-test directory)",
+        "---",
+        "**Technical Details**",
+        "- Built from commit: a59bc77",
+        "- Build date: 2026-01-08"
+      ],
+      "platforms": {
+        "daisy": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-release-v0.2.3d.bin",
+        "daisy_debug": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy_debug/eisei-daisy-debug-v0.2.3d.bin",
+        "esp32": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-v0.2.3d.bin"
+      }
+    },
     {
       "version": "v0.2.2",
       "releaseDate": "2025-12-13",
