@@ -1,6 +1,26 @@
 {
-  "latest": "v0.2.4",
+  "latest": "v0.2.4b",
   "releases": [
+    {
+      "version": "v0.2.4b",
+      "releaseDate": "2026-01-19",
+      "changelog": [
+        "### v0.2.4b - Save Prompt UI Improvements",
+        "**Improvements**",
+        "- added new save prompt ui elements",
+        "**Fixes**",
+        "- save prompt UI now able to work for more than 1 time per session :)",
+        "---",
+        "**Technical Details**",
+        "- Built from commit: b18e5c7",
+        "- Build date: 2026-01-19"
+      ],
+      "platforms": {
+        "daisy": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-release-v0.2.4b.bin",
+        "daisy_debug": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy_debug/eisei-daisy-debug-v0.2.4b.bin",
+        "esp32": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-v0.2.4b.bin"
+      }
+    },
     {
       "version": "v0.2.4",
       "releaseDate": "2026-01-19",
