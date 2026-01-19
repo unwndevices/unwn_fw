@@ -1,6 +1,25 @@
 {
-  "latest": "v0.2.3f",
+  "latest": "v0.2.4",
   "releases": [
+    {
+      "version": "v0.2.4",
+      "releaseDate": "2026-01-19",
+      "changelog": [
+        "### v0.2.4 - New Save Prompt UI and Warp UI",
+        "**New Features**",
+        "- new save prompt UI with improved animation and feedback",
+        "- new warp UI with improved animation and feedback",
+        "---",
+        "**Technical Details**",
+        "- Built from commit: 522f8a6",
+        "- Build date: 2026-01-19"
+      ],
+      "platforms": {
+        "daisy": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-release-v0.2.4.bin",
+        "daisy_debug": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy_debug/eisei-daisy-debug-v0.2.4.bin",
+        "esp32": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-v0.2.4.bin"
+      }
+    },
     {
       "version": "v0.2.3f",
       "releaseDate": "2026-01-08",
