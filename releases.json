@@ -1,6 +1,35 @@
 {
-  "latest": "v0.2.4c",
+  "latest": "v0.3.0",
   "releases": [
+    {
+      "version": "v0.3.0",
+      "releaseDate": "2026-01-21",
+      "changelog": [
+        "### v0.3.0 - Audio Performance & Filter Bank Fixes",
+        "**New Features**",
+        "- band solo feature added to Spectra processor (allows soloing individual bands 0-19 or 'off' via serial command)",
+        "**Improvements**",
+        "- optimized audio callback performance:",
+        "  - removed printf from audio processing path",
+        "  - replaced powf(10.f, x) with pow10f(x) for ~90% speedup",
+        "  - implemented 1024-entry tanh LUT in TapeSaturation",
+        "  - cached ApplyWindow gain calculations",
+        "  - optimized InterpolateFrames to blur result once instead of 2-4 input frames",
+        "- debugging outputs now only added on debug builds",
+        "**Bug Fixes**",
+        "- fixed filter bank silent low bands by regenerating coefficients for 48kHz sample rate (was incorrectly using 96kHz coefficients, causing first 5 bands to be at half frequency)",
+        "- fixed POT_KEY mapping to use exponential scaling for A1 at noon (now outputs 55Hz instead of ~69Hz, ensuring equal octaves per rotation)",
+        "---",
+        "**Technical Details**",
+        "- Built from commit: cdf484e",
+        "- Build date: 2026-01-21"
+      ],
+      "platforms": {
+        "daisy": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-release-v0.3.0.bin",
+        "daisy_debug": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy_debug/eisei-daisy-debug-v0.3.0.bin",
+        "esp32": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-v0.3.0.bin"
+      }
+    },
     {
       "version": "v0.2.4c",
       "releaseDate": "2026-01-19",
