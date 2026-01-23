@@ -1,6 +1,26 @@
 {
-  "latest": "v0.3.0",
+  "latest": "v0.3.1",
   "releases": [
+    {
+      "version": "v0.3.1",
+      "releaseDate": "2026-01-23",
+      "changelog": [
+        "### v0.3.1 - Bug Fixes and Improvements",
+        "**Improvements**",
+        "- improved uart communication setup for less errors",
+        "  **Bug Fixes**",
+        "- fixed debug and release builds scripts",
+        "---",
+        "**Technical Details**",
+        "- Built from commit: 79c0898",
+        "- Build date: 2026-01-23"
+      ],
+      "platforms": {
+        "daisy": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-release-v0.3.1.bin",
+        "daisy_debug": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy_debug/eisei-daisy-debug-v0.3.1.bin",
+        "esp32": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-v0.3.1.bin"
+      }
+    },
     {
       "version": "v0.3.0",
       "releaseDate": "2026-01-21",
