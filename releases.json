@@ -1,6 +1,24 @@
 {
-  "latest": "v0.3.1",
+  "latest": "v0.3.2",
   "releases": [
+    {
+      "version": "v0.3.2",
+      "releaseDate": "2026-01-25",
+      "changelog": [
+        "### v0.3.2 - Bug Fixes and Improvements",
+        "**Bug Fixes**",
+        "- Lowered Daisy Uart DMA interrupt priority to prevent pops in audio processing",
+        "---",
+        "**Technical Details**",
+        "- Built from commit: d7771df",
+        "- Build date: 2026-01-25"
+      ],
+      "platforms": {
+        "daisy": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-release-v0.3.2.bin",
+        "daisy_debug": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy_debug/eisei-daisy-debug-v0.3.2.bin",
+        "esp32": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-v0.3.2.bin"
+      }
+    },
     {
       "version": "v0.3.1",
       "releaseDate": "2026-01-23",
