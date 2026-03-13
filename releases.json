@@ -1,6 +1,25 @@
 {
-  "latest": "v0.3.2",
+  "latest": "v0.5.0",
   "releases": [
+    {
+      "version": "v0.5.0",
+      "releaseDate": "2026-03-13",
+      "changelog": [
+        "### v0.5.0 - LittleFS Data Partition in Release Pipeline",
+        "**New Features**",
+        "- release pipeline now builds and publishes a LittleFS image containing the Daisy firmware for ESP32 data partition flashing",
+        "---",
+        "**Technical Details**",
+        "- Built from commit: dddd6d3",
+        "- Build date: 2026-03-13"
+      ],
+      "platforms": {
+        "daisy": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-release-v0.5.0.bin",
+        "daisy_debug": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy_debug/eisei-daisy-debug-v0.5.0.bin",
+        "esp32": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-v0.5.0.bin",
+        "littlefs": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/littlefs/eisei-littlefs-v0.5.0.bin"
+      }
+    },
     {
       "version": "v0.3.2",
       "releaseDate": "2026-01-25",
