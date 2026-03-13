@@ -30,21 +30,24 @@ jobs:
           gh release download ${VERSION} --repo unwndevices/unwn --pattern "eisei-daisy-release-${VERSION}.bin"
           gh release download ${VERSION} --repo unwndevices/unwn --pattern "eisei-daisy-debug-${VERSION}.bin"
           gh release download ${VERSION} --repo unwndevices/unwn --pattern "eisei-esp32-${VERSION}.bin"
+          gh release download ${VERSION} --repo unwndevices/unwn --pattern "eisei-littlefs-${VERSION}.bin"
 
       - name: Copy to Firmware Directory
         run: |
           VERSION="${{ github.event.client_payload.version }}"
-          mkdir -p firmware/eisei/{daisy,daisy_debug,esp32}
+          mkdir -p firmware/eisei/{daisy,daisy_debug,esp32,littlefs}
 
           # Copy files to appropriate directories
           cp eisei-daisy-release-${VERSION}.bin firmware/eisei/daisy/
           cp eisei-daisy-debug-${VERSION}.bin firmware/eisei/daisy_debug/
           cp eisei-esp32-${VERSION}.bin firmware/eisei/esp32/
+          cp eisei-littlefs-${VERSION}.bin firmware/eisei/littlefs/
 
           # Update latest symlinks
           ln -sf eisei-daisy-release-${VERSION}.bin firmware/eisei/daisy/latest.bin
           ln -sf eisei-daisy-debug-${VERSION}.bin firmware/eisei/daisy_debug/latest.bin
           ln -sf eisei-esp32-${VERSION}.bin firmware/eisei/esp32/latest.bin
+          ln -sf eisei-littlefs-${VERSION}.bin firmware/eisei/littlefs/latest.bin
 
       - name: Update releases.json
         run: |
@@ -74,7 +77,8 @@ jobs:
             platforms: {
               daisy: `https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-release-${version}.bin`,
               daisy_debug: `https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy_debug/eisei-daisy-debug-${version}.bin`,
-              esp32: `https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-${version}.bin`
+              esp32: `https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-${version}.bin`,
+              littlefs: `https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/littlefs/eisei-littlefs-${version}.bin`
             }
           });
 
