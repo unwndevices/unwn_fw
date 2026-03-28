@@ -70,6 +70,7 @@ jobs:
           const changelog = changelogText.split('\n').filter(line => line.trim());
 
           releases.latest = version;
+          releases.releases = releases.releases.filter(r => r.version !== version);
           releases.releases.unshift({
             version,
             releaseDate: date,
