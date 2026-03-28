@@ -1,6 +1,49 @@
 {
-  "latest": "v0.5.1",
+  "latest": "v1.0.0",
   "releases": [
+    {
+      "version": "v1.0.0",
+      "releaseDate": "2026-03-28",
+      "changelog": [
+        "### v1.0.0 - First Production Release",
+        "**New Features**",
+        "- Datum Manager UI with smooth list scrolling, orbit playhead, inactivity timeout, and loaded-datum jump",
+        "- 8 built-in algorithmic datum presets (VCA, Mirror, Chirp, Binary, Harmonic, etc.) filling all default slots",
+        "- Datum preview system with real LUT preset loading, interpolation, and 30Hz refresh",
+        "- Health diagnostics system with audio loopback test tone for calibration jig",
+        "- OTA verbose error info — error reason displayed on OTA progress screen",
+        "- Screen centering adjustment integrated into Calibration scene with NVS persistence",
+        "**Improvements**",
+        "- Scanner CV remapped: reversed positive range, permutation-chained negative range",
+        "- Lens pot curve improved for better control feel",
+        "- LED brightness halved globally; REC input LED turns off when nothing connected",
+        "- Audio LED fix for accurate level display",
+        "- Comprehensive unit test suite (57+ tests) covering DatumManager, persistence, protocol dispatch",
+        "- Code quality sweep: extracted CommService, CallbackHandlers, and engine logic from main.cpp; replaced volatile with std::atomic",
+        "- Removed `Serial.setDebugOutput` and unused temporary variables from production build",
+        "- SD card firmware cleanup on boot to prevent bootloader auto-flash revert",
+        "**Bug Fixes**",
+        "- Fixed SRAM overflow on Daisy (106.92% to 79.42%) by moving LUT arrays to SDRAM",
+        "- Fixed satellite position wiggle when orbit rate is zero",
+        "- Fixed DatumManager orbit playhead draw order and visibility",
+        "- Fixed encoder bounce and missed detents with halfQuad accumulator",
+        "- Fixed datum list-request race condition with retry on dropped initial send",
+        "- Fixed PWM range limiting to avoid silence at extremes",
+        "- Fixed C_List culling, centering, and selection offset",
+        "- Fixed boot timing and audio loopback probe detection",
+        "- Fixed CI build (octal version constant, ESP32 font path, ARM GCC pinning)",
+        "---",
+        "**Technical Details**",
+        "- Built from commit: 06b8e58",
+        "- Build date: 2026-03-28"
+      ],
+      "platforms": {
+        "daisy": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-release-v1.0.0.bin",
+        "daisy_debug": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy_debug/eisei-daisy-debug-v1.0.0.bin",
+        "esp32": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-v1.0.0.bin",
+        "littlefs": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/littlefs/eisei-littlefs-v1.0.0.bin"
+      }
+    },
     {
       "version": "v0.5.1",
       "releaseDate": "2026-03-19",
