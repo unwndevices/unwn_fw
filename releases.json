@@ -1,6 +1,27 @@
 {
-  "latest": "v1.0.0",
+  "latest": "v1.0.1b1",
   "releases": [
+    {
+      "version": "v1.0.1b1",
+      "releaseDate": "2026-05-12",
+      "changelog": [
+        "### v1.0.1b1 - Filterbank CV Tracking Fix (internal test build)",
+        "**Bug Fixes**",
+        "- Restored full key_hz routing (pot + CV) to the filterbank. High CV now saturates filterbank pitch at 440 Hz instead of being silently dropped, while oscillators continue to track. The original SVF instability is already neutralised upstream by the FilterBank LUT clamp work.",
+        "**Internal**",
+        "- Removed dead `key_pot_hz` field and its plumbing through `AudioControlSnapshot`, `EngineParams`, and `AudioProcessor`.",
+        "---",
+        "**Technical Details**",
+        "- Built from commit: 88ce82d",
+        "- Build date: 2026-05-12"
+      ],
+      "platforms": {
+        "daisy": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-release-v1.0.1b1.bin",
+        "daisy_debug": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy_debug/eisei-daisy-debug-v1.0.1b1.bin",
+        "esp32": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-v1.0.1b1.bin",
+        "littlefs": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/littlefs/eisei-littlefs-v1.0.1b1.bin"
+      }
+    },
     {
       "version": "v1.0.0",
       "releaseDate": "2026-03-28",
