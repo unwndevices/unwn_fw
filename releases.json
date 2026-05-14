@@ -1,6 +1,29 @@
 {
-  "latest": "v1.0.1b1",
+  "latest": "v1.0.1b2",
   "releases": [
+    {
+      "version": "v1.0.1b2",
+      "releaseDate": "2026-05-14",
+      "changelog": [
+        "### v1.0.1b2 - Filterbank CV + SDRAM cache (internal test build)",
+        "**Bug Fixes**",
+        "- Restored full key_hz routing (pot + CV) to the filterbank. High CV now saturates filterbank pitch at 440 Hz instead of being silently dropped, while oscillators continue to track. The original SVF instability is already neutralised upstream by the FilterBank LUT clamp work.",
+        "**Improvements**",
+        "- Adaptive SDRAM datum cache: per-datum allocation scales 4× and loads on demand, reducing static SDRAM pressure.",
+        "**Internal**",
+        "- Removed dead `key_pot_hz` field and its plumbing through `AudioControlSnapshot`, `EngineParams`, and `AudioProcessor`.",
+        "---",
+        "**Technical Details**",
+        "- Built from commit: b9c1b54",
+        "- Build date: 2026-05-14"
+      ],
+      "platforms": {
+        "daisy": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-release-v1.0.1b2.bin",
+        "daisy_debug": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy_debug/eisei-daisy-debug-v1.0.1b2.bin",
+        "esp32": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-v1.0.1b2.bin",
+        "littlefs": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/littlefs/eisei-littlefs-v1.0.1b2.bin"
+      }
+    },
     {
       "version": "v1.0.1b1",
       "releaseDate": "2026-05-12",
