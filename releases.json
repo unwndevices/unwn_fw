@@ -1,6 +1,30 @@
 {
-  "latest": "v1.0.3b2",
+  "latest": "v1.0.4b2",
   "releases": [
+    {
+      "version": "v1.0.4b2",
+      "releaseDate": "2026-05-15",
+      "changelog": [
+        "### v1.0.4b2 - FW update + reset gestures + CV-wake (internal test build)",
+        "**Bug Fixes**",
+        "- ESP32 firmware file is now deleted from the SD card after a successful OTA transfer. Previously the file persisted, so the boot-time scan re-detected it on the next reboot and re-triggered the update procedure indefinitely (#78).",
+        "- Screensaver now exits on CV/pot motion, not only on ESP32 button/encoder/wheel input. Extends the v1.0.2b1 entry-deferral fix to the active-screensaver case using the same motion thresholds.",
+        "**Behavior Changes**",
+        "- Replaced the v1.0.3b1 hold-SET-then-tap reset gestures with plain long-press gestures, to stop colliding with other SET actions:",
+        "  - **ORBIT long-press** → reset per-satellite orbit multipliers to 1.0×",
+        "  - **SAT long-press** → reset orbit offsets and trigger orbit phase reset (combines what the old SET+SAT modifier did with what ORBIT long-press did)",
+        "---",
+        "**Technical Details**",
+        "- Built from commit: 49065f5",
+        "- Build date: 2026-05-15"
+      ],
+      "platforms": {
+        "daisy": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-release-v1.0.4b2.bin",
+        "daisy_debug": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy_debug/eisei-daisy-debug-v1.0.4b2.bin",
+        "esp32": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-v1.0.4b2.bin",
+        "littlefs": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/littlefs/eisei-littlefs-v1.0.4b2.bin"
+      }
+    },
     {
       "version": "v1.0.3b2",
       "releaseDate": "2026-05-15",
