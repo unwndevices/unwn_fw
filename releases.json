@@ -1,6 +1,32 @@
 {
-  "latest": "v1.0.4b1",
+  "latest": "v1.0.3b2",
   "releases": [
+    {
+      "version": "v1.0.3b2",
+      "releaseDate": "2026-05-15",
+      "changelog": [
+        "### v1.0.3b2 - Osc volume + UI gesture cleanup (internal test build)",
+        "Re-cut: v1.0.3b1 build failed on build-esp32 because the #74 hold-modifier",
+        "gesture used an `AbstractInputManager::GetPressDuration` method that only",
+        "existed on the Daisy concrete class. Contents are otherwise identical to b1.",
+        "**Bug Fixes**",
+        "- Internal oscillator output level raised to full DAC scale — addresses \"low volume vs other brands\" reports (#77).",
+        "- Orbit speed visualization now auto-dismisses after the timeout instead of staying pinned until the user cycles through warps. Root cause was a vestigial lens-pot/CV handler that kept resetting the view timer on every analog drift sample (#79).",
+        "- RESET TIME and RESET ORBIT redesigned as hold-modifier gestures, replacing the broken simultaneous-press combo (#74):",
+        "  - RESET TIME: hold SET ≥ 1 s, then tap SATELLITE",
+        "  - RESET ORBIT: hold SET ≥ 1 s, then tap ORBIT encoder",
+        "---",
+        "**Technical Details**",
+        "- Built from commit: 84f87ad",
+        "- Build date: 2026-05-15"
+      ],
+      "platforms": {
+        "daisy": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-release-v1.0.3b2.bin",
+        "daisy_debug": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy_debug/eisei-daisy-debug-v1.0.3b2.bin",
+        "esp32": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-v1.0.3b2.bin",
+        "littlefs": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/littlefs/eisei-littlefs-v1.0.3b2.bin"
+      }
+    },
     {
       "version": "v1.0.4b1",
       "releaseDate": "2026-05-15",
