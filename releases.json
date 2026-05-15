@@ -1,6 +1,30 @@
 {
-  "latest": "v1.0.4b3",
+  "latest": "v1.0.4b4",
   "releases": [
+    {
+      "version": "v1.0.4b4",
+      "releaseDate": "2026-05-15",
+      "changelog": [
+        "### v1.0.4b4 - FW update + reset gestures + CV-wake (internal test build)",
+        "**Bug Fixes**",
+        "- ESP32 firmware file is now deleted from the SD card after a successful OTA transfer. Previously the file persisted, so the boot-time scan re-detected it on the next reboot and re-triggered the update procedure indefinitely (#78).",
+        "- Screensaver now defers/exits on CV motion across all six DaisyParams channels (KEY, SPREAD, LENS, TIME, ORBIT, WARP). The check uses the same per-field thresholds that already drive UI animations (e.g. the warp pulse when a warp is the CV target), so anything moving the UI counts as activity. Previous b2/b3 attempts used wrong signals (DaisyParams with coarse threshold; LED-stream with jack-plug gating) and missed steady-state CV motion.",
+        "**Behavior Changes**",
+        "- Replaced the v1.0.3b1 hold-SET-then-tap reset gestures with plain long-press gestures, to stop colliding with other SET actions:",
+        "  - **ORBIT long-press** → reset per-satellite orbit multipliers to 1.0×",
+        "  - **SAT long-press** → reset orbit offsets and trigger orbit phase reset (combines what the old SET+SAT modifier did with what ORBIT long-press did)",
+        "---",
+        "**Technical Details**",
+        "- Built from commit: 5caee1b",
+        "- Build date: 2026-05-15"
+      ],
+      "platforms": {
+        "daisy": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-release-v1.0.4b4.bin",
+        "daisy_debug": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy_debug/eisei-daisy-debug-v1.0.4b4.bin",
+        "esp32": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-v1.0.4b4.bin",
+        "littlefs": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/littlefs/eisei-littlefs-v1.0.4b4.bin"
+      }
+    },
     {
       "version": "v1.0.4b3",
       "releaseDate": "2026-05-15",
