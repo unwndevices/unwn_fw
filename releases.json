@@ -1,6 +1,31 @@
 {
-  "latest": "v1.0.4b5",
+  "latest": "v1.1.0b1",
   "releases": [
+    {
+      "version": "v1.1.0b1",
+      "releaseDate": "2026-05-16",
+      "changelog": [
+        "### v1.1.0b1 - Advanced Settings menu",
+        "**New Features**",
+        "- Advanced Settings menu — list-left / value-right layout, entered by holding SET at boot or by holding SET for 5 seconds from the main view. Long-press SET (2s) inside the menu saves and exits back to the main view.",
+        "- Modulator gain (0.00× – 2.00×, default 1.00×) — linear multiplier applied to the modulator envelope. Affects both audio output and the spectrum drawn on screen. Adjusted via the touchwheel on the highlighted row.",
+        "- Spread parameter quantization — snaps each satellite's oscillator pitch to the nearest tone of a selected musical scale. Scale 0 (chromatic) is no-op and preserves the v1.0.x sound.",
+        "- Editable scales table on SD: `/scales.txt` on the Daisy SD card lets you define up to 16 custom scales. One scale per line, format `name = N,N,N,...` with semitone offsets in `0..11`. Comments (`#`) and blank lines are allowed; malformed lines are silently skipped.",
+        "- Built-in default scales used when `/scales.txt` is absent or yields no parseable lines: chromatic, octaves, fifths, major, minor, pentatonic.",
+        "- Persistence: advanced settings are stored in ESP32 NVS and pushed to the Daisy on every session handshake.",
+        "- Scale names sync from Daisy to ESP32 on connect, so the advanced settings menu shows the real names from `/scales.txt` (or the built-in defaults), not just generic indices.",
+        "---",
+        "**Technical Details**",
+        "- Built from commit: 55e9bd7",
+        "- Build date: 2026-05-16"
+      ],
+      "platforms": {
+        "daisy": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-release-v1.1.0b1.bin",
+        "daisy_debug": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy_debug/eisei-daisy-debug-v1.1.0b1.bin",
+        "esp32": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-v1.1.0b1.bin",
+        "littlefs": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/littlefs/eisei-littlefs-v1.1.0b1.bin"
+      }
+    },
     {
       "version": "v1.0.4b5",
       "releaseDate": "2026-05-15",
