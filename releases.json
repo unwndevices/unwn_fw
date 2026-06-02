@@ -1,6 +1,36 @@
 {
-  "latest": "v1.0.4b6",
+  "latest": "v1.0.6b1",
   "releases": [
+    {
+      "version": "v1.0.6b1",
+      "releaseDate": "2026-06-02",
+      "changelog": [
+        "### v1.0.6b1 - Unified bugfix beta: slots + orbits + datum preview (internal test build)",
+        "Consolidates the two parallel test lines — v1.0.4b5 (FW update / reset gestures / CV-wake / slot fixes) and v1.0.5b1 (datum preview responsiveness) — into a single build, plus the slot-restore and SD-contention work that landed after each was cut. Carries forward every fix from v1.0.2b1 through v1.0.5b1.",
+        "**Bug Fixes**",
+        "- Slot navigation now restores previously-saved slot data and prefetches the next slot, so scrolling between slots no longer surfaces stale/empty datum or stutters on selection.",
+        "- Saving works after a UI-driven preset load: the SavePrompt is now armed when a slot is populated from the preset list (not just from a fresh recording), so long-press SET opens the save dialog instead of being silently refused (#67).",
+        "- Slot reload drops the stale pool entry first, fixing silent load failures where a reloaded slot kept serving the previously-cached datum.",
+        "- Orbits no longer snap-resync to master phase when a satellite multiplier sits at ≈1.0, removing an unwanted phase jump.",
+        "- Removed dead/legacy button gestures and gated DatumManager actions until Daisy reports ready, preventing early-boot misfires.",
+        "- Datum preview SD access is now serialized behind the slot async loader and reads one chunk per Tick, eliminating the back-to-back `f_read` contention that could stall audio/UI while a preview load was in flight.",
+        "- DatumManager stays alive while a preview load is in flight, so scrolling mid-load no longer risks a hang.",
+        "**Improvements**",
+        "- Preview chunk size raised 4 KB → 16 KB for faster large-file previews.",
+        "**Internal**",
+        "- `DEBUG_BUILD`-gated SD-contention diagnostics added around the preview/loader path. Compiled out of release builds.",
+        "---",
+        "**Technical Details**",
+        "- Built from commit: 33ca52f",
+        "- Build date: 2026-06-02"
+      ],
+      "platforms": {
+        "daisy": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-release-v1.0.6b1.bin",
+        "daisy_debug": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy_debug/eisei-daisy-debug-v1.0.6b1.bin",
+        "esp32": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-v1.0.6b1.bin",
+        "littlefs": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/littlefs/eisei-littlefs-v1.0.6b1.bin"
+      }
+    },
     {
       "version": "v1.0.4b6",
       "releaseDate": "2026-05-21",
