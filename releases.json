@@ -1,6 +1,31 @@
 {
-  "latest": "v1.0.6b2",
+  "latest": "v1.0.6b3",
   "releases": [
+    {
+      "version": "v1.0.6b3",
+      "releaseDate": "2026-06-14",
+      "changelog": [
+        "### v1.0.6b3 - Firmware update flow cleanup (internal test build)",
+        "Carries forward everything in v1.0.6b2. De-confuses the two firmware-update paths: version numbers are now informational (logged) rather than a gate on whether firmware installs.",
+        "**Behavior Changes**",
+        "- microSD `.esp` install (the official end-user path) no longer version-gates: any `.esp` found on the SD card is installed, then deleted on success so it applies exactly once and never loops (delete-after-install, #78). Version is logged, not compared.",
+        "- ESP32 data-section OTA (the dev path — a Daisy binary placed in the ESP32 LittleFS) no longer requires a higher version number to flash. The bundled firmware is always pushed to the Daisy when present and deleted from LittleFS after a successful transfer; that delete replaces the old version check as the re-flash loop guard.",
+        "- The Daisy firmware embedded in the ESP32 data partition is now a single, version-independent file (`eisei.bin`) instead of an accumulating `eisei-X.Y.Z.bin` per build. Distributed release artifacts keep their versioned names.",
+        "**Internal**",
+        "- Build script and CI release pipeline emit `data/eisei.bin`; the local build removes stale versioned copies so they don't pile up in the LittleFS image.",
+        "- Removed the unused force-update (WARP-held-at-boot) code path from the ESP32 OTA sender.",
+        "---",
+        "**Technical Details**",
+        "- Built from commit: d7e19c7",
+        "- Build date: 2026-06-14"
+      ],
+      "platforms": {
+        "daisy": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-release-v1.0.6b3.bin",
+        "daisy_debug": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy_debug/eisei-daisy-debug-v1.0.6b3.bin",
+        "esp32": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-v1.0.6b3.bin",
+        "littlefs": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/littlefs/eisei-littlefs-v1.0.6b3.bin"
+      }
+    },
     {
       "version": "v1.0.6b2",
       "releaseDate": "2026-06-14",
