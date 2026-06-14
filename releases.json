@@ -1,6 +1,26 @@
 {
-  "latest": "v1.0.6b1",
+  "latest": "v1.0.6b2",
   "releases": [
+    {
+      "version": "v1.0.6b2",
+      "releaseDate": "2026-06-14",
+      "changelog": [
+        "### v1.0.6b2 - Screensaver fix on top of b1 (internal test build)",
+        "Carries forward everything in v1.0.6b1; adds a single screensaver fix.",
+        "**Bug Fixes**",
+        "- Screensaver now actually triggers when CV/LFO signals are patched. CV motion no longer defers or exits the screensaver: the six DaisyParams channels are pot+CV summed (KEY/SPREAD/LENS) or CV-only (TIME/ORBIT/WARP), so live CV kept the idle timer permanently reset and the screen never slept. The screensaver is now reset/exited solely by physical UI input (buttons, encoder, wheel). Supersedes the CV/pot-motion wake added in v1.0.2b1 (#66) and reworked through v1.0.4b5. Per-channel UI animations are unchanged.",
+        "---",
+        "**Technical Details**",
+        "- Built from commit: 22b213c",
+        "- Build date: 2026-06-14"
+      ],
+      "platforms": {
+        "daisy": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-release-v1.0.6b2.bin",
+        "daisy_debug": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy_debug/eisei-daisy-debug-v1.0.6b2.bin",
+        "esp32": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-v1.0.6b2.bin",
+        "littlefs": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/littlefs/eisei-littlefs-v1.0.6b2.bin"
+      }
+    },
     {
       "version": "v1.0.6b1",
       "releaseDate": "2026-06-02",
