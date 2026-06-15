@@ -1,6 +1,28 @@
 {
-  "latest": "v1.0.6b3",
+  "latest": "v1.0.6b4",
   "releases": [
+    {
+      "version": "v1.0.6b4",
+      "releaseDate": "2026-06-15",
+      "changelog": [
+        "### v1.0.6b4 - Pot-touch screensaver wake (internal test build)",
+        "Carries forward everything in v1.0.6b3. Restores pot-driven screensaver control that was lost when v1.0.6b2 removed CV-driven wake wholesale — without bringing back the CV problem b2 fixed.",
+        "**Behavior Changes**",
+        "- Turning the KEY, SPREAD, or LENS pot now resets the screensaver idle timer and wakes the screen from the screensaver again, matching buttons / encoder / touchwheel. Pot motion is detected from the pot-only ADC on the Daisy, independent of CV, so a deliberate knob turn defers/exits the screensaver while patched CV/LFO signals still correctly let it sleep (the b2 fix is preserved). Per-channel UI animations are unchanged.",
+        "**Internal**",
+        "- The Daisy streams a pot-activity flag in `DaisyParams` (now 7 bytes), derived from a pot-only motion threshold. The ESP32 applies it on the UI core via an atomic rather than mutating view state from the UART task. The struct size change requires flashing both MCUs together.",
+        "---",
+        "**Technical Details**",
+        "- Built from commit: 1589d55",
+        "- Build date: 2026-06-15"
+      ],
+      "platforms": {
+        "daisy": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-release-v1.0.6b4.bin",
+        "daisy_debug": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy_debug/eisei-daisy-debug-v1.0.6b4.bin",
+        "esp32": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-v1.0.6b4.bin",
+        "littlefs": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/littlefs/eisei-littlefs-v1.0.6b4.bin"
+      }
+    },
     {
       "version": "v1.0.6b3",
       "releaseDate": "2026-06-14",
