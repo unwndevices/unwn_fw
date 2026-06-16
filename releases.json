@@ -1,6 +1,32 @@
 {
-  "latest": "v1.0.6b4",
+  "latest": "v1.0.6",
   "releases": [
+    {
+      "version": "v1.0.6",
+      "releaseDate": "2026-06-16",
+      "changelog": [
+        "### v1.0.6 - Slots, datum preview & screensaver fixes",
+        "**Bug Fixes**",
+        "- Slot navigation restores previously-saved slot data and prefetches the next slot",
+        "- Orbit-speed visualization auto-dismisses after its timeout",
+        "- Internal oscillator output level raised to full DAC scale ",
+        "- microSD `.esp` firmware install no longer loops: the file is deleted after a successful install so it applies exactly once",
+        "**Behavior Changes**",
+        "- Screensaver uses now 5-minute idle timeout and is reset/woken by physical UI input",
+        "- New Reset gestures:",
+        "  ORBIT long-press resets orbit multipliers to 1.0×; SAT long-press resets orbit offsets and triggers an orbit phase reset.",
+        "---",
+        "**Technical Details**",
+        "- Built from commit: 63e9cc0",
+        "- Build date: 2026-06-16"
+      ],
+      "platforms": {
+        "daisy": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-release-v1.0.6.bin",
+        "daisy_debug": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy_debug/eisei-daisy-debug-v1.0.6.bin",
+        "esp32": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-v1.0.6.bin",
+        "littlefs": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/littlefs/eisei-littlefs-v1.0.6.bin"
+      }
+    },
     {
       "version": "v1.0.6b4",
       "releaseDate": "2026-06-15",
