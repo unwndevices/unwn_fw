@@ -1,6 +1,25 @@
 {
-  "latest": "v1.0.6",
+  "latest": "v1.0.7",
   "releases": [
+    {
+      "version": "v1.0.7",
+      "releaseDate": "2026-06-16",
+      "changelog": [
+        "### v1.0.7 - Recording stability fix",
+        "**Bug Fixes**",
+        "- Fixed an audio dropout that could happen when recording into the slot you're currently playing — capturing a new sound over the one that's playing no longer stalls or glitches the output.",
+        "---",
+        "**Technical Details**",
+        "- Built from commit: 6b643ac",
+        "- Build date: 2026-06-16"
+      ],
+      "platforms": {
+        "daisy": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-release-v1.0.7.bin",
+        "daisy_debug": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy_debug/eisei-daisy-debug-v1.0.7.bin",
+        "esp32": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-v1.0.7.bin",
+        "littlefs": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/littlefs/eisei-littlefs-v1.0.7.bin"
+      }
+    },
     {
       "version": "v1.0.6",
       "releaseDate": "2026-06-16",
