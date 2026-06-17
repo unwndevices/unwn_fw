@@ -1,6 +1,40 @@
 {
-  "latest": "v1.0.7",
+  "latest": "v1.1.0b2",
   "releases": [
+    {
+      "version": "v1.1.0b2",
+      "releaseDate": "2026-06-17",
+      "changelog": [
+        "### v1.1.0b2 - Harmonic spread & Advanced Settings (beta)",
+        "> Beta build for testers. First 1.1.0 preview with the new **harmonic spread** mode, on top of the Advanced Settings menu, custom scales, and modulator gain.",
+        "**New Features**",
+        "- **Harmonic spread mode** — a new satellite spread shape you can A/B against the original. With the spread fully open at 100 Hz, the original \"expo\" mode stacks octaves (100 / 200 / 400 / 800), while the new \"harmonic\" mode follows the harmonic series (100 / 200 / 300 / 400). At zero spread both modes sound identical, so the knob's starting point is unchanged, and the filterbank follows the new tuning. Toggle \"expo\" / \"harmonic\" on its row in the Advanced Settings menu.",
+        "- **Advanced Settings menu** — a new settings view with the list on the left and the highlighted value on the right. Enter it by holding SET at power-on, or by holding SET for 5 seconds from the main view. A single SET click saves and returns to the main view.",
+        "- **Snap pitch to a scale** — quantizes each satellite's pitch to the nearest note of a chosen scale. The default \"chromatic\" is a no-op and sounds exactly like v1.0.x.",
+        "- **Custom scales from SD** — add a `/scales.txt` file to the Daisy SD card to define up to 16 of your own scales, one per line as `name = 0,2,4,5,7,9,11` (semitone offsets 0–11). Lines starting with `#` and blank lines are ignored. Without the file, built-in scales are used: chromatic, octaves, fifths, major, minor, pentatonic.",
+        "- **Modulator gain** — a 0.00× – 2.00× level for the modulator (default 1.00×), affecting both the audio and the on-screen spectrum, adjustable with the touchwheel on its row.",
+        "**Improvements**",
+        "- Advanced Settings (scale, spread mode, modulator gain) are saved on the device and restored automatically after each power cycle.",
+        "- Scale names sync to the menu, so you see the real names from your `/scales.txt` (or the built-ins) instead of plain numbers.",
+        "**Bug Fixes**",
+        "- The hold-SET \"save\" prompt now only appears in the Datum Manager, so it no longer pops up while you're holding SET to open Advanced Settings.",
+        "- Advanced Settings now reliably reach the engine and take effect as you change them.",
+        "- Settings entered by holding SET at power-on are no longer overwritten during start-up.",
+        "**Notes for testers**",
+        "- This build updates both the ESP32 and the Daisy firmware — flash the full release bundle so both stay in sync.",
+        "- The harmonic mode's filter tracking is still being tuned — please A/B the two modes by ear and let us know which feels better.",
+        "---",
+        "**Technical Details**",
+        "- Built from commit: 1d292df",
+        "- Build date: 2026-06-17"
+      ],
+      "platforms": {
+        "daisy": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-release-v1.1.0b2.bin",
+        "daisy_debug": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy_debug/eisei-daisy-debug-v1.1.0b2.bin",
+        "esp32": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-v1.1.0b2.bin",
+        "littlefs": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/littlefs/eisei-littlefs-v1.1.0b2.bin"
+      }
+    },
     {
       "version": "v1.0.7",
       "releaseDate": "2026-06-16",
