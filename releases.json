@@ -1,6 +1,27 @@
 {
-  "latest": "v1.1.0b2",
+  "latest": "v1.0.7b1",
   "releases": [
+    {
+      "version": "v1.0.7b1",
+      "releaseDate": "2026-06-17",
+      "changelog": [
+        "### v1.0.7b1 - Preset capacity + recording stability",
+        "**Improvements**",
+        "- You can now save up to 64 presets (previously limited to 16). Recordings beyond the 16th now appear in the preset list as expected.",
+        "**Bug Fixes**",
+        "- Fixed an audio dropout that could happen when recording into the slot you're currently playing — capturing a new sound over the one that's playing no longer stalls or glitches the output.",
+        "---",
+        "**Technical Details**",
+        "- Built from commit: 22cfdb9",
+        "- Build date: 2026-06-17"
+      ],
+      "platforms": {
+        "daisy": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-release-v1.0.7b1.bin",
+        "daisy_debug": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy_debug/eisei-daisy-debug-v1.0.7b1.bin",
+        "esp32": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-v1.0.7b1.bin",
+        "littlefs": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/littlefs/eisei-littlefs-v1.0.7b1.bin"
+      }
+    },
     {
       "version": "v1.1.0b2",
       "releaseDate": "2026-06-17",
