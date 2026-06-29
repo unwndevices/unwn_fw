@@ -1,6 +1,32 @@
 {
-  "latest": "v1.0.8b1",
+  "latest": "v1.0.8",
   "releases": [
+    {
+      "version": "v1.0.8",
+      "releaseDate": "2026-06-29",
+      "changelog": [
+        "### v1.0.8 - Steadier TIME CV, reliable saving & startup version display",
+        "**Improvements**",
+        "- The startup screen now shows both firmware versions — the display/UI version and the audio engine (DSP) version — so you can confirm both halves of Eisei are up to date at a glance.",
+        "**Bug Fixes**",
+        "- TIME CV now works as a true position control. Patching a sawtooth LFO, envelope, or any moving signal into TIME CV used to slowly drag the \"zero\" point counterclockwise, so your orbits would creep out of place over time. TIME CV is now read as an absolute position: 0V holds at the start, 2.5V is half a lap around, 5V is a full lap back to the start, and negative voltages move the other way. No more drift.",
+        "- Steady playheads at rest. With nothing patched (or a resting signal) into TIME CV, electrical noise no longer makes the playheads jitter — they now sit perfectly still.",
+        "- SAT long-press now returns the orbit cleanly to zero. Long-pressing SAT to reset orbit position used to leave a moving, locked orbit frozen with its satellites fanned out near — but not at — the start. It now snaps exactly back to zero.",
+        "- No more duplicate entries in the datum list. The list was showing the 8 built-in presets and your saved recordings twice over; each datum now appears only once.",
+        "- Assigning a datum to a slot no longer asks you to save. Holding SET after assigning a datum to a slot used to pop the save prompt even when you hadn't recorded anything new. Assigning a slot now just stores it quietly.",
+        "- Saving no longer gets stuck. Every so often, confirming a save would leave the screen frozen on \"Saving…\" and the only way out was to power-cycle the module. Saving is now reliable across repeated saves, and on the rare chance one doesn't go through, the screen clears itself after a few seconds so you can simply try again instead of rebooting.",
+        "---",
+        "**Technical Details**",
+        "- Built from commit: d65284a",
+        "- Build date: 2026-06-29"
+      ],
+      "platforms": {
+        "daisy": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-release-v1.0.8.bin",
+        "daisy_debug": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy_debug/eisei-daisy-debug-v1.0.8.bin",
+        "esp32": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-v1.0.8.bin",
+        "littlefs": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/littlefs/eisei-littlefs-v1.0.8.bin"
+      }
+    },
     {
       "version": "v1.0.8b1",
       "releaseDate": "2026-06-28",
