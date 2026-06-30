@@ -1,6 +1,25 @@
 {
-  "latest": "v1.0.8",
+  "latest": "v1.0.8b2",
   "releases": [
+    {
+      "version": "v1.0.8b2",
+      "releaseDate": "2026-06-30",
+      "changelog": [
+        "### v1.0.8b2 - Orbit rate returns cleanly to a stop",
+        "**Bug Fixes**",
+        "- The orbit rate now comes to a complete, reliable stop. Once you had moved the orbit speed away from zero, it was hard — sometimes impossible — to bring it back to a full standstill: the rate would slip from a faint drift one way straight past zero to a faint drift the other way, so the satellites never quite came to rest. Turning the encoder back down now always lands exactly on a complete stop, and spinning it quickly still ramps smoothly through the range.",
+        "---",
+        "**Technical Details**",
+        "- Built from commit: cb95f8d",
+        "- Build date: 2026-06-30"
+      ],
+      "platforms": {
+        "daisy": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-release-v1.0.8b2.bin",
+        "daisy_debug": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy_debug/eisei-daisy-debug-v1.0.8b2.bin",
+        "esp32": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-v1.0.8b2.bin",
+        "littlefs": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/littlefs/eisei-littlefs-v1.0.8b2.bin"
+      }
+    },
     {
       "version": "v1.0.8",
       "releaseDate": "2026-06-29",
