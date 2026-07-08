@@ -1,6 +1,44 @@
 {
-  "latest": "v1.0.8b4",
+  "latest": "v1.0.8",
   "releases": [
+    {
+      "version": "v1.0.8",
+      "releaseDate": "2026-07-08",
+      "changelog": [
+        "### v1.0.8 - Persistent settings, steadier TIME CV & calmer orbit control",
+        "**New Features**",
+        "- Your settings now stick across power cycles. Orbit speed and multiplier and your Warp settings are remembered, and spectral table slot assignments are kept even without saving — the table you assign to a slot is right where you left it after a reboot.",
+        "- Save up to 64 spectral tables.",
+        "- Key CV now shapes the filter banks too. Previously Key CV only affected the internal oscillators; it now tracks the filter banks as well, so the whole voice follows pitch together.",
+        "**Improvements**",
+        "- Steadier TIME CV. TIME CV now works as a true position control. Patching a sawtooth LFO, envelope, or any moving signal into TIME CV used to slowly drag the \"zero\" point counterclockwise, so your orbits would creep out of place over time. TIME CV is now read as an absolute position: 0V holds at the start, 2.5V is half a lap around, 5V is a full lap back to the start, and negative voltages move the other way. No more drift.",
+        "- Calmer, finer orbit rate control. Orbit rate steps are smaller near a standstill for fine control over slow orbits, and encoder acceleration only kicks in on genuinely fast turns and resets when you change direction — flick back the other way and it lands a single clean step.",
+        "- Rock-steady playheads at rest. With nothing patched (or a resting signal) into TIME CV, electrical noise no longer makes the satellite playheads jitter — they now sit perfectly still.",
+        "- More reliable saving, smoother spectral table handling, and improved overall audio stability.",
+        "- The Naptime screensaver now starts after 5 minutes with no physical interaction — touch wheel, buttons, pot, or encoder — and wakes instantly on any of them.",
+        "- The startup screen now shows both firmware versions — the display/UI version and the audio engine (DSP) version — so you can confirm both halves of Eisei are up to date at a glance.",
+        "**Behavior Changes**",
+        "- Long-press SAT to reset the time offsets; long-press the ORBIT encoder to reset the orbit multiplier.",
+        "**Bug Fixes**",
+        "- Saving no longer gets stuck. Every so often, confirming a save would leave the screen frozen on \"Saving…\" and the only way out was to power-cycle the module. Saving is now reliable across repeated saves, and on the rare chance one doesn't go through, the screen clears itself after a few seconds so you can simply try again instead of rebooting.",
+        "- SAT long-press now returns the orbit cleanly to zero. Resetting a moving, locked orbit used to leave its satellites fanned out near — but not at — the start; it now snaps exactly back to zero.",
+        "- Orbit rate now comes to a complete, reliable stop. Once you had moved the orbit speed away from zero, it was hard — sometimes impossible — to bring it back to a full standstill; turning the encoder back down now always lands exactly on a complete stop, and spinning it quickly still ramps smoothly through the range.",
+        "- Orbit rate readout no longer shows round speeds one digit short (e.g. 0.500 read as 0.499).",
+        "- No more duplicate entries in the spectral table list. The list was showing the 8 built-in tables and your saved recordings twice over; each now appears only once.",
+        "- Assigning a spectral table to a slot no longer asks you to save. Holding SET after assigning a table to a slot used to pop the save prompt even when you hadn't recorded anything new; assigning a slot now just stores it quietly.",
+        "---",
+        "**Technical Details**",
+        "- Built from commit: edfa964",
+        "- Build date: 2026-07-08"
+      ],
+      "platforms": {
+        "daisy": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-release-v1.0.8.bin",
+        "daisy_debug": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy_debug/eisei-daisy-debug-v1.0.8.bin",
+        "esp32": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-v1.0.8.bin",
+        "esp32_app": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32_app/eisei-1.0.8.esp",
+        "littlefs": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/littlefs/eisei-littlefs-v1.0.8.bin"
+      }
+    },
     {
       "version": "v1.0.8b4",
       "releaseDate": "2026-07-07",
