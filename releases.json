@@ -21,6 +21,7 @@
         "- Improved spectral table handling",
         "- Improved satellite playhead stability at rest (no more jitter)",
         "- Improved audio stability",
+        "- Tuned orbit encoder response",
         "---",
         "**Technical Details**",
         "- Built from commit: edfa964",
