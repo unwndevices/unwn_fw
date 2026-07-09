@@ -1,0 +1,43 @@
+name: Bug report
+description: Report a problem with the firmware
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Describe the problem and what you expected instead.
+      placeholder: The display freezes when...
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. ...
+        2. ...
+    validations:
+      required: false
+
+  - type: input
+    id: version
+    attributes:
+      label: Firmware version
+      description: Found in the release notes or the DRO flasher.
+      placeholder: v1.1.0b3
+    validations:
+      required: true
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Affected component
+      options:
+        - Not sure
+        - Daisy (STM32H750)
+        - ESP32-S3
+        - Both
+    validations:
+      required: true
