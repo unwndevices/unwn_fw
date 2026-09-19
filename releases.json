@@ -1,6 +1,30 @@
 {
-  "latest": "v1.1.0b4",
+  "latest": "v1.1.0b5",
   "releases": [
+    {
+      "version": "v1.1.0b5",
+      "releaseDate": "2026-09-19",
+      "changelog": [
+        "### v1.1.0b5 - Move the whole loop range (beta)",
+        "> Beta for testers. Changes since v1.1.0b4. Adds a third SET mode for the orbit range; everything else from b4 is unchanged.",
+        "**New Features**",
+        "- **Move the whole range** — SET now cycles through three modes: set start, set end, then move both together. In the third mode the touchwheel slides the entire range while keeping its width, so you can dial in a range and then sweep it around. It stops when a side reaches the edge (0 or 1).",
+        "**Notes for testers**",
+        "- Version stays 1.1.0; this is beta 5.",
+        "- SET cycle: start → end → both → off. In \"both\" mode both range markers light up on screen.",
+        "---",
+        "**Technical Details**",
+        "- Built from commit: 9b1ebfc",
+        "- Build date: 2026-09-19"
+      ],
+      "platforms": {
+        "daisy": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-release-v1.1.0b5.bin",
+        "daisy_debug": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy_debug/eisei-daisy-debug-v1.1.0b5.bin",
+        "esp32": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-v1.1.0b5.bin",
+        "esp32_app": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32_app/eisei-1.1.0b5.esp",
+        "littlefs": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/littlefs/eisei-littlefs-v1.1.0b5.bin"
+      }
+    },
     {
       "version": "v1.1.0b4",
       "releaseDate": "2026-09-19",
