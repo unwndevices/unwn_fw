@@ -1,6 +1,35 @@
 {
-  "latest": "v1.1.0b3",
+  "latest": "v1.1.0b4",
   "releases": [
+    {
+      "version": "v1.1.0b4",
+      "releaseDate": "2026-09-19",
+      "changelog": [
+        "### v1.1.0b4 - Oracle Terminal link: MIDI, polyphony & live telemetry (beta)",
+        "> Beta for testers. Changes since v1.1.0b3. Everything from b3 is still here; this build adds the Oracle Terminal companion link and MIDI play. If you don't connect anything to the external USB port, the module behaves exactly as in b3.",
+        "**New Features**",
+        "- **USB-MIDI play** — plug a MIDI keyboard or computer into the external USB port and play Eisei directly. Up to 4 notes at once (polyphonic).",
+        "- **MIDI preset select** — Program Change messages switch presets.",
+        "- **Poly envelope from the panel** — in MIDI/poly mode the KEY and SPREAD pots shape each note's attack and decay; held notes sustain until released.",
+        "- **Live telemetry** — streams real-time audio levels, spectrum, and module state to the Oracle Terminal companion app.",
+        "**Improvements**",
+        "- **Steadier host link** — the module now rides through a USB suspend without freezing, backed by a hardware watchdog that recovers from a stall.",
+        "**Notes for testers**",
+        "- Version stays 1.1.0; this is beta 4.",
+        "- MIDI and telemetry live on the external USB port; the internal port is unchanged.",
+        "---",
+        "**Technical Details**",
+        "- Built from commit: fe916ad",
+        "- Build date: 2026-09-19"
+      ],
+      "platforms": {
+        "daisy": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy/eisei-daisy-release-v1.1.0b4.bin",
+        "daisy_debug": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/daisy_debug/eisei-daisy-debug-v1.1.0b4.bin",
+        "esp32": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32/eisei-esp32-v1.1.0b4.bin",
+        "esp32_app": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/esp32_app/eisei-1.1.0b4.esp",
+        "littlefs": "https://raw.githubusercontent.com/unwndevices/unwn_fw/main/firmware/eisei/littlefs/eisei-littlefs-v1.1.0b4.bin"
+      }
+    },
     {
       "version": "v1.1.0b3",
       "releaseDate": "2026-07-09",
